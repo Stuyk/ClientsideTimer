@@ -6,6 +6,18 @@ API.onChatMessage.connect(function (msg) {
         timer.RunOnce = true;
     }
 });
+function testFunction() {
+    API.sendChatMessage("Hello World");
+}
+API.onUpdate.connect(function () {
+    if (timers.length < 1) {
+        return;
+    }
+
+    for (var i = 0; i < timers.length; i++) {
+        timers[i].run();
+    }
+});
 /**
  * Create a new timer. Milliseconds, what function to run.
  * Ex. newTimer(5000, resource.Timer.newTimer)
@@ -15,6 +27,7 @@ function newTimer(milliseconds: number, whatToRun: any) {
     let timer = new Timer(milliseconds, whatToRun);
     return timer;
 }
+
 class Timer {
     private _function: any;
     private _args: any[];
