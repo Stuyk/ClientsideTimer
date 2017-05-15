@@ -1,14 +1,4 @@
 ﻿var timers = [];
-API.onChatMessage.connect(function (msg) {
-    if (msg === "hello") {
-        var timer: Timer = newTimer(5000, testFunction);
-        timer.Running = true;
-        timer.RunOnce = true;
-    }
-});
-function testFunction() {
-    API.sendChatMessage("Hello World");
-}
 API.onUpdate.connect(function () {
     if (timers.length < 1) {
         return;
