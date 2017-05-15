@@ -3,8 +3,13 @@ Clientside Timer for GTANetwork
 
 ---
 
-### How to use it:
+### USE OF THIS CODE IS STRICTLY FOR THE GTA:NETWORK CLIENT.
 
+### USE OF THE CODE ELSEWHERE IS STRICTLY PROHIBITED.
+
+---
+
+### How to use it:
 
 ##### Base Code
 ```
@@ -21,6 +26,8 @@ function testFunction() {
 }
 ```
 
+---
+
 Initialize a timer:
 
 `var timer: Timer = resource.Timer.newTimer(x, function);`
@@ -29,16 +36,24 @@ Initialize a timer:
 
 `function = The function you want to run.` EX. `resource.myFileName.myFunction;`
 
+---
+
 Start your timer.
 
 `timer.Running = true`
 
+---
+
 Run it endlessly until you tell it to stop.
 
 `timer.RunOnce = false`
+
+---
 
 Add some aguments to your function.
 
 `var args: any[] = ["Argument1", argument2, 2]`
 
 `timer.Args = args;`
+
+
